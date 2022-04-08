@@ -7,7 +7,7 @@
 * [Installation](#installation)
 * [To-dos](#to-dos)
 # Actual scripts descriptions:
-## [live_os_me.js](https://github.com/fr0gtastic/tampermonkey_scripts/live_os_me.js)
+## [live_os_me.js](https://github.com/fr0gtastic/tampermonkey_scripts/scripts/test/live_os_me.js)
 1. Recognizes when you are on a collection's page on OpenSea or MagicEden.
 2. Takes the collcetion's floor price from the HTML element
 3. Makes a request to CoinGecko to get live price of the cryptocurrency (ETH / SOL)
