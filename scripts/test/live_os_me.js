@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         OpenSea / ME Live price
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.0
 // @description  Script made to display the dollar value of a collection on opensea or magiceden.
 // @author       fr0gtastic
 // @match        *://opensea.io/collection/*
@@ -38,13 +38,6 @@
             }
             console.log("in getLivePrice")
             console.log({txt1, txt2, txt3})
-            /*
-            if (txt2 == 'ETH logo'){
-                let wantedCurr = "ethereum"
-                } else if (txt2 == 'SOL logo'){
-                    let wantedCurr = "solana"
-                    }
-                    */
             var wantedCurr = (txt2 == 'ETH logo') ? "ethereum" : (txt2 == 'SOL logo') ? "solana" : null
             $.get( "https://api.coingecko.com/api/v3/simple/price?ids="+wantedCurr+"&vs_currencies=usd", function( data ) {
                 console.log(data)
