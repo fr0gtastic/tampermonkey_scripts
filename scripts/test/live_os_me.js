@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         OpenSea / ME Live price
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Script made to display the dollar value of a collection on opensea or magiceden.
 // @author       fr0gtastic
 // @match        *://opensea.io/collection/*
@@ -31,7 +31,10 @@
 
         function getLivePrice(txt1, txt2, txt3){
             function roundTwo(num1){
-            return Math.round((num1 + Number.EPSILON))
+                var res1 = Math.round((num1 + Number.EPSILON))
+                if (res1.toString().length > 3){
+                    return res1.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "\'");
+                } else return res1
             }
             console.log("in getLivePrice")
             console.log({txt1, txt2, txt3})
@@ -64,6 +67,7 @@
                         if(this.innerHTML == 'floor price'){
                             console.log("parents:")
                             var icon = $(this).parent().children().first().children().first().children().first().children().first()
+                            //Decides by the icon, which chain it is
                             var chain = icon.attr("aria-label")
                             var price_2 = $(this).parent().children().first()
                             var price_3 = $(price_2).children().first().children().last().children().first()
@@ -88,7 +92,7 @@
                         }
                     });
                 } else if (location.href.match(/magiceden/)){
-
+                    //MAGICEDEN
                 }
             })
         }
