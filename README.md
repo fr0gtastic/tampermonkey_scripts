@@ -1,6 +1,6 @@
 # tampermonkey_scripts
-* Tampermonkey scripts I've coded using jquery 
-* Jquery reference is from: https://github.com/XhyEax/JQueryAutoLoad/blob/main/JQueryAutoLoad.js
+* Userscripts I've coded using TamperMonkey and JQuery
+* JQuery reference is from: https://github.com/XhyEax/JQueryAutoLoad/blob/main/JQueryAutoLoad.js
 # Table Of Contents:
 * [Different scripts](#actual-scripts-descriptions)
   * [live_os_me.js]
