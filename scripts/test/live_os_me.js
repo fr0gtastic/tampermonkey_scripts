@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         OpenSea / ME Live price
 // @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to take over the world!
-// @author       You
-// @match        *://opensea.io/*
+// @version      1.0
+// @description  Script made to display the dollar value of a collection on opensea or magiceden.
+// @author       fr0gtastic
+// @match        *://opensea.io/collection/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=opensea.io
 // @grant        none
 // ==/UserScript==
